@@ -1,5 +1,6 @@
 import React from 'react';
 import GetShowInfo from '../utils/axios_methods';
+import { Search } from './Search';
 
 export class TvApp extends React.Component {
 	componentDidMount(){
@@ -10,7 +11,11 @@ export class TvApp extends React.Component {
 	render(){
 		return (
 			<div className="container">
-				<h1>This is the TV Viewer</h1>
+				<div className="small-6 small-centered">
+					<h1 className="header">Tv Show Viewer</h1>
+					<br/>
+					<Search className="small-10 small-centered"></Search>
+				</div>
 			</div>
 		);
 	}
