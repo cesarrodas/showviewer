@@ -1,6 +1,7 @@
 import React from 'react';
 import GetAllShowInfo from '../utils/axios_methods';
 import { Search } from './Search';
+import { TvRoutes } from '../router/index';
 
 export class TvApp extends React.Component {
 	constructor(){
@@ -32,6 +33,8 @@ export class TvApp extends React.Component {
 					<h1>{this.state.showName}</h1>
 					<br/>
 					<Search searchingText={this.search.bind(this)}></Search>
+					<br/>
+					<TvRoutes></TvRoutes>
 				</div>
 			</div>
 		);
