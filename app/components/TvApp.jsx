@@ -1,5 +1,5 @@
 import React from 'react';
-import GetShowInfo from '../utils/axios_methods';
+import GetAllShowInfo from '../utils/axios_methods';
 import { Search } from './Search';
 
 export class TvApp extends React.Component {
@@ -10,9 +10,16 @@ export class TvApp extends React.Component {
 		};
 	}
 	componentDidMount(){
-		GetShowInfo('daredevil').then((data) => {
+		GetAllShowInfo('daredevil').then((data) => {
 			console.log(data);
 		});
+	}
+	componentDidUpdate(){
+		GetAllShowInfo(this.state.showName).then((data) => {
+			console.log(data);
+		}).catch((e) => {
+			console.log(e);
+		})
 	}
 	search(passedName){
 		this.setState({showName: passedName});
