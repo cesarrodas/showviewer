@@ -1,23 +1,32 @@
 import React from 'react';
 import GetAllShowInfo from '../utils/axios_methods';
 import { Search } from './Search';
-import { TvRoutes } from '../router/index';
 
 export class TvApp extends React.Component {
 	constructor(){
 		super();
 		this.state = {
-			showName: ''
+			showName: '',
+			showData: {
+				info: [],
+				seasons: [],
+				cast: []
+			}
 		};
 	}
 	componentDidMount(){
 		GetAllShowInfo('daredevil').then((data) => {
 			console.log(data);
+			this.setState({
+				showData: data
+			})
 		});
 	}
 	componentDidUpdate(){
 		GetAllShowInfo(this.state.showName).then((data) => {
-			console.log(data);
+			this.setState({
+				showData: data
+			})
 		}).catch((e) => {
 			console.log(e);
 		})
@@ -34,7 +43,7 @@ export class TvApp extends React.Component {
 					<br/>
 					<Search searchingText={this.search.bind(this)}></Search>
 					<br/>
-					<TvRoutes></TvRoutes>
+					<div>{React.cloneElement(this.props.children, { allShowInfo: this.state.showData })}</div>
 				</div>
 			</div>
 		);

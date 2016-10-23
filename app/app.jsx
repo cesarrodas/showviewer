@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Route, Router, IndexRoute, hashHistory} from 'react-router';
 
-import {TvApp} from './components/TvApp';
+import {TvRoutes} from './router/index';
 
 // load foundation
 $(document).foundation();
@@ -10,6 +10,6 @@ $(document).foundation();
 require('style!css!sass!applicationStyles')
 
 ReactDOM.render(
-	<TvApp></TvApp>,
+	<TvRoutes></TvRoutes>,
 	document.getElementById('app')
 );

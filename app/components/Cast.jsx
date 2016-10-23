@@ -6,9 +6,13 @@ export class Cast extends React.Component {
 		return (
 			<div>
 				<nav>
-					<Link to="/">Home</Link>
-					<Link to="/seasons">Seasons</Link>
-					<Link to="/cast">Cast</Link>
+					<div className="menu-centered">
+					  <ul className="menu">
+					    <li><Link to="/">Home</Link></li>
+					    <li><Link to="/seasons">Seasons</Link></li>
+					    <li><Link to="/cast">Cast</Link></li>
+					  </ul>
+					</div>
 				</nav>
 				<br/>
 				<h1>Cast Component</h1>
