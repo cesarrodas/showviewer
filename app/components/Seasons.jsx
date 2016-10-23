@@ -1,19 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { Navigation } from './Navigation';
 
 export class Seasons extends React.Component {
 	render() {
 		return (
 			<div>
-				<nav>
-					<div className="menu-centered">
-					  <ul className="menu">
-					    <li><Link to="/">Home</Link></li>
-					    <li><Link to="/seasons">Seasons</Link></li>
-					    <li><Link to="/cast">Cast</Link></li>
-					  </ul>
-					</div>
-				</nav>
+				<Navigation></Navigation>
 				<br/>
 				<h1>Seasons Component</h1>
 			</div>
