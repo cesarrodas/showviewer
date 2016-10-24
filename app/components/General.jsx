@@ -6,15 +6,23 @@ export class General extends React.Component {
 	constructor(props){
 		super(props);
 	}
-	hello(){
-		console.log("General", this.props.allShowInfo.info);
-	}
 	render() {
+		var show = this.props.allShowInfo.info;
+		var summary = show.summary ? show.summary.replace(/<\/?[^>]+(>|$)/g, "") : '';
 		return (
 			<div>
-				<Navigation></Navigation>
+				<Navigation selected="general"></Navigation>
 				<br/>
-				<h1 onClick={this.hello.bind(this)}>General Info Component</h1>
+				<br/>
+				<div className="row">
+					<div className="small-6 columns">
+						{show.image ? <img width="400" src={show.image.original} /> : null}
+					</div>
+					<div className="small-6 columns">
+						<h3>{show.name}</h3>
+						<p>{summary}</p>
+					</div>
+				</div>
 			</div>
 		);
 	}

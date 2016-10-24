@@ -38,8 +38,8 @@ export class TvApp extends React.Component {
 		return (
 			<div className="container">
 				<div className="small-6 small-centered">
+					<br/>
 					<h1 className="header">Tv Show Viewer</h1>
-					<h1>{this.state.showName}</h1>
 					<br/>
 					<Search searchingText={this.search.bind(this)}></Search>
 					<br/>
