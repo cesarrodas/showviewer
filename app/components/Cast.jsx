@@ -6,10 +6,8 @@ import {Actor} from './Actor';
 
 export class Cast extends React.Component {
 	handleActors(){
-		var actors = this.props.allShowInfo.cast ? this.props.allShowInfo.cast : [];
-		var actorCollection = actors.map((actor, index) => <Actor key={index} info={actor}></Actor>);
-		// var actors = this.props.allShowInfo.cast;
-		// console.log("HELLO", actors);
+		let actors = this.props.allShowInfo.cast ? this.props.allShowInfo.cast : [];
+		let actorCollection = actors.map((actor, index) => <Actor key={index} info={actor}></Actor>);
 		return actorCollection;
 	}
 	render() {
@@ -17,9 +15,9 @@ export class Cast extends React.Component {
 			<div>
 				<Navigation selected="cast"></Navigation>
 				<br/>
-				<h1>Cast Component</h1>
+				<h2 className="minorheader">Cast</h2>
 				<br/>
-				<div className="small-6 small-offset-3">
+				<div className="small-8 small-offset-2">
 					{this.handleActors()}
 				</div>
 			</div>

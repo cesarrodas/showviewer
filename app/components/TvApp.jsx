@@ -15,7 +15,7 @@ export class TvApp extends React.Component {
 		};
 	}
 	componentDidMount(){
-		GetAllShowInfo('daredevil').then((data) => {
+		GetAllShowInfo('silicon valley').then((data) => {
 			console.log(data);
 			this.setState({
 				showData: data

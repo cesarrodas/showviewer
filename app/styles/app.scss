@@ -8,6 +8,12 @@
 //components
 .header {
 	text-align: center;
+	font-family: 'Orbitron', sans-serif;
+}
+
+.minorheader{
+	text-align: center;
+	font-family: 'News Cycle', sans-serif;
 }
 
 .active {
@@ -25,10 +31,23 @@
 	text-align: center;
 }
 
+.season {
+	height: auto;
+	background-color: #f9f9f9;
+	border: 2px solid #c7c7c7;
+	margin: 4px;
+	border-radius: 20px;
+	text-align: center;
+}
+
 .center {
 	text-align: center;
 }
 
 .actorimage {
+	border-radius: 10px;
+}
+
+.seasonimage {
 	border-radius: 10px;
 }
