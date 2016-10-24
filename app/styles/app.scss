@@ -17,7 +17,18 @@
 }
 
 .actor {
-	height: 100px;
-	background-color: orange;
-	margin: 2px;
+	height: auto;
+	background-color: #f9f9f9;
+	border: 2px solid #c7c7c7;
+	margin: 4px;
+	border-radius: 20px;
+	text-align: center;
+}
+
+.center {
+	text-align: center;
+}
+
+.actorimage {
+	border-radius: 10px;
 }

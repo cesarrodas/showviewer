@@ -19,7 +19,9 @@ export class Cast extends React.Component {
 				<br/>
 				<h1>Cast Component</h1>
 				<br/>
-				{this.handleActors()}
+				<div className="small-6 small-offset-3">
+					{this.handleActors()}
+				</div>
 			</div>
 		);
 	}
