@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router';
 import { Navigation } from './Navigation';
 
 export class General extends React.Component {
@@ -11,7 +10,7 @@ export class General extends React.Component {
 		var summary = show.summary ? show.summary.replace(/<\/?[^>]+(>|$)/g, "") : '';
 		return (
 			<div>
-				<Navigation selected="general"></Navigation>
+				{Object.keys(show).length > 0 && <Navigation selected="general"></Navigation>}
 				<br/>
 				<br/>
 				<div className="row">
@@ -19,7 +18,7 @@ export class General extends React.Component {
 						{show.image ? <img width="400" src={show.image.original} /> : null}
 					</div>
 					<div className="small-6 columns">
-						<h3 class="minorheader">{show.name}</h3>
+						<h3 className="minorheader">{show.name}</h3>
 						<p>{summary}</p>
 					</div>
 				</div>

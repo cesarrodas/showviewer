@@ -8,19 +8,11 @@ export class TvApp extends React.Component {
 		this.state = {
 			showName: '',
 			showData: {
-				info: [],
+				info: {},
 				seasons: [],
 				cast: []
 			}
 		};
-	}
-	componentDidMount(){
-		GetAllShowInfo('silicon valley').then((data) => {
-			console.log(data);
-			this.setState({
-				showData: data
-			})
-		});
 	}
 	componentDidUpdate(){
 		GetAllShowInfo(this.state.showName).then((data) => {
